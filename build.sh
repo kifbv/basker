@@ -163,8 +163,8 @@ cat <<EOF
 EOF
 ) >> "$index_file"
 
-# Copy CSS files to the output directory
-cp "$LIGHT_THEME" "$DARK_THEME" "$OUT_DIR"/
+# Copy CSS files and error page to the output directory
+cp "$LIGHT_THEME" "$DARK_THEME" "error.html" "$OUT_DIR"/
 
 echo "Site generated in $OUT_DIR"
 
