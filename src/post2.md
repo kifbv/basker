@@ -1,3 +1,9 @@
+---
+title: Basker Static Site Generator
+description: Content from the readme.md file.
+date: 2025-04-05
+---
+
 # 🌟 Basker - A Minimalist Static Site Generator 🌟
 
 ## 📝 Overview

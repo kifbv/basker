@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Post</title>
+    <title>Basker Static Site Generator</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,21 +31,85 @@
 </header>
 <main>
 
-<h1>Main Content Starts Here</h1>
-<p>Your markdown content goes here...</p>
-<pre><code>
-- The `title` appears in the post and index page
-- The `description` is used in the index page
-- The `date` is used for sorting (will be added automatically if missing)
+<h1>🌟 Basker - A Minimalist Static Site Generator 🌟</h1>
+<h2>📝 Overview</h2>
+<p>Basker is a lightweight static site generator that converts Markdown files into a beautifully styled website using the Catppuccin color theme. It's perfect for blogs, documentation sites, or personal websites that prioritize simplicity and readability.</p>
+<p>Check out the live demo at <a href="https://basker.franckratier.design">basker.franckratier.design</a> to see Basker in action!</p>
+<h2>✨ Features</h2>
+<ul>
+<li>🌓 <strong>Dark/Light Mode Toggle</strong>: Switch between Catppuccin Latte &amp; Mocha themes with a click</li>
+<li>📱 <strong>Responsive Design</strong>: Looks great on mobile, tablet, and desktop</li>
+<li>🔤 <strong>Google Fonts</strong>: Uses Cinzel for headings and Fauna One for body text</li>
+<li>📅 <strong>Automatic Date Handling</strong>: Sorts posts by date and displays them nicely</li>
+<li>🔄 <strong>Simple Build Process</strong>: One script to generate your entire site</li>
+</ul>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Bash shell</li>
+<li><a href="https://github.com/commonmark/cmark">cmark</a> for Markdown processing</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p>Use this repository as a template:</p>
+<ul>
+<li>Click the &quot;Use this template&quot; button at the top of the <a href="https://github.com/kifbv/basker">GitHub repository</a></li>
+<li>Name your new repository and create it</li>
+<li>Clone your new repository:</li>
+</ul>
+<pre><code class="language-bash">git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+</code></pre>
+</li>
+<li>
+<p>Place your Markdown files in the <code>src/</code> directory</p>
+</li>
+<li>
+<p>Run the build script:</p>
+<pre><code class="language-bash">./build.sh
+</code></pre>
+</li>
+<li>
+<p>Your generated site will be in the <code>docs/</code> directory. Browse/test it locally and <a href="https://docs.github.com/en/pages">publish it</a> to Github Pages!</p>
+</li>
+</ol>
+<h2>📄 File Structure</h2>
+<pre><code>basker/
+├── build.sh           # Main build script
+├── header.html        # Header template
+├── footer.html        # Footer template
+├── catppuccin-latte.css # Light theme
+├── catppuccin-mocha.css # Dark theme
+├── src/               # Place your Markdown files here
+│   ├── post1.md
+│   ├── post2.md
+│   └── ...
+└── docs/              # Generated HTML and assets
+    ├── index.html
+    ├── post1.html
+    └── ...
+</code></pre>
+<h2>📝 Creating Content</h2>
+<h3>Markdown Format</h3>
+<p>Each Markdown file should include YAML frontmatter at the top:</p>
+<pre><code class="language-markdown">title: My Awesome Post
+description: A brief description of the post
+date: 2024-04-03
 
-## 🎨 Customization
+# Main Content Starts Here
 
-### Site Name
-
-Change the `SITE_NAME` variable in `build.sh`:
-
-```bash
-SITE_NAME=&quot;Your Site Name&quot;
+Your markdown content goes here...
+</code></pre>
+<ul>
+<li>The <code>title</code> appears in the post and index page</li>
+<li>The <code>description</code> is used in the index page</li>
+<li>The <code>date</code> is used for sorting (will be added automatically if missing)</li>
+</ul>
+<h2>🎨 Customization</h2>
+<h3>Site Name</h3>
+<p>Change the <code>SITE_NAME</code> variable in <code>build.sh</code>:</p>
+<pre><code class="language-bash">SITE_NAME=&quot;Your Site Name&quot;
 </code></pre>
 <h3>Styling</h3>
 <p>Modify the CSS files to change the appearance:</p>
