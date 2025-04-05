@@ -36,32 +36,7 @@ Check out the live demo at [basker.franckratier.design](https://basker.franckrat
    ./build.sh
    ```
 
-4. Your generated site will be in the `docs/` directory, ready to be published as a GitHub Page!
-
-### Deploying on GitHub Pages
-
-1. Push your repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push
-   ```
-
-2. Configure GitHub Pages:
-   - Go to your repository on GitHub
-   - Navigate to Settings > Pages
-   - Under "Source", select "Deploy from a branch"
-   - Select "main" branch and "/docs" folder
-   - Click "Save"
-
-3. Custom Domain (Optional):
-   - In the GitHub Pages settings, enter your custom domain
-   - Create/update the `docs/CNAME` file with your domain name
-   - Configure your DNS provider with appropriate records:
-     - For apex domain: Add A records pointing to GitHub Pages IP addresses
-     - For subdomain: Add a CNAME record pointing to `yourusername.github.io`
-
-4. Wait a few minutes for your site to be published. You can check the status in the GitHub Pages section of your repository settings.
+4. Your generated site will be in the `docs/` directory. Browse/test it locally and [publish it](https://docs.github.com/en/pages) to Github Pages!
 
 ## 📄 File Structure
 
