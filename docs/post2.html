@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Post</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <!-- Default theme is dark -->
+    <link id="theme-stylesheet" rel="stylesheet" href="catppuccin-mocha.css">
+    <script>
+        function toggleTheme() {
+            var sheet = document.getElementById('theme-stylesheet');
+            if (sheet.getAttribute('href') === 'catppuccin-mocha.css') {
+                sheet.setAttribute('href', 'catppuccin-latte.css');
+            } else {
+                sheet.setAttribute('href', 'catppuccin-mocha.css');
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="site-name"><a href="index.html">Basker</a></div>
+    <label class="toggle">
+        <input type="checkbox" onclick="toggleTheme()" checked>
+        <span class="slider round"></span>
+    </label>
+</header>
+<main>
+
+<h1>🌟 Basker - A Minimalist Static Site Generator 🌟</h1>
+<h2>📝 Overview</h2>
+<p>Basker is a lightweight static site generator that converts Markdown files into a beautifully styled website using the Catppuccin color theme. It's perfect for blogs, documentation sites, or personal websites that prioritize simplicity and readability.</p>
+<h2>✨ Features</h2>
+<ul>
+<li>🎨 <strong>Beautiful Styling</strong>: Uses the Catppuccin color palette (both Latte and Mocha themes)</li>
+<li>🌓 <strong>Dark/Light Mode Toggle</strong>: Switch between themes with a click</li>
+<li>📱 <strong>Responsive Design</strong>: Looks great on mobile, tablet, and desktop</li>
+<li>🔤 <strong>Google Fonts</strong>: Uses Cinzel for headings and Fauna One for body text</li>
+<li>📅 <strong>Automatic Date Handling</strong>: Sorts posts by date and displays them nicely</li>
+<li>🔄 <strong>Simple Build Process</strong>: One script to generate your entire site</li>
+</ul>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Bash shell</li>
+<li><a href="https://github.com/commonmark/cmark">cmark</a> for Markdown processing</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p>Clone this repository:</p>
+<pre><code class="language-bash">git clone https://github.com/yourusername/basker.git
+cd basker
+</code></pre>
+</li>
+<li>
+<p>Place your Markdown files in the <code>src/</code> directory</p>
+</li>
+<li>
+<p>Run the build script:</p>
+<pre><code class="language-bash">./build.sh
+</code></pre>
+</li>
+<li>
+<p>Your generated site will be in the <code>dist/</code> directory</p>
+</li>
+</ol>
+<h2>📄 File Structure</h2>
+<pre><code>basker/
+├── build.sh           # Main build script
+├── header.html        # Header template
+├── footer.html        # Footer template
+├── catppuccin-latte.css # Light theme
+├── catppuccin-mocha.css # Dark theme
+├── src/               # Place your Markdown files here
+│   ├── post1.md
+│   ├── post2.md
+│   └── ...
+└── dist/              # Generated HTML and assets
+    ├── index.html
+    ├── post1.html
+    └── ...
+</code></pre>
+<h2>📝 Creating Content</h2>
+<h3>Markdown Format</h3>
+<p>Each Markdown file should include YAML frontmatter at the top:</p>
+<pre><code class="language-markdown">title: My Awesome Post
+description: A brief description of the post
+date: 2024-04-03
+
+# Main Content Starts Here
+
+Your markdown content goes here...
+</code></pre>
+<ul>
+<li>The <code>title</code> appears in the post and index page</li>
+<li>The <code>description</code> is used in the index page</li>
+<li>The <code>date</code> is used for sorting (will be added automatically if missing)</li>
+</ul>
+<h2>🎨 Customization</h2>
+<h3>Site Name</h3>
+<p>Change the <code>SITE_NAME</code> variable in <code>build.sh</code>:</p>
+<pre><code class="language-bash">SITE_NAME=&quot;Your Site Name&quot;
+</code></pre>
+<h3>Styling</h3>
+<p>Modify the CSS files to change the appearance:</p>
+<ul>
+<li><code>catppuccin-latte.css</code> - Light theme</li>
+<li><code>catppuccin-mocha.css</code> - Dark theme</li>
+</ul>
+<h3>Fonts</h3>
+<p>The site uses Google Fonts:</p>
+<ul>
+<li>Cinzel for titles (elegant serif font)</li>
+<li>Fauna One for body text (readable serif font)</li>
+<li>Monospace for code blocks</li>
+</ul>
+<p>To change fonts, edit:</p>
+<ol>
+<li>The Google Fonts import in <code>header.html</code></li>
+<li>The same import in the index page section of <code>build.sh</code></li>
+<li>Update the font-family properties in both CSS files</li>
+</ol>
+<h3>List Style</h3>
+<p>Lists are displayed with bullet points by default. This can be customized in the CSS files.</p>
+<h2>🔧 Advanced Usage</h2>
+<h3>Adding Images</h3>
+<p>Place image files in the <code>dist/</code> directory and reference them in your Markdown:</p>
+<pre><code class="language-markdown">![My Image](image.jpg)
+</code></pre>
+<h3>Custom HTML</h3>
+<p>You can include HTML directly in your Markdown files:</p>
+<pre><code class="language-markdown">&lt;div class=&quot;custom-container&quot;&gt;
+  Custom HTML here
+&lt;/div&gt;
+</code></pre>
+<h2>📚 Examples</h2>
+<p>Check out the example posts in the <code>src/</code> directory to see how to format your content.</p>
+<h2>🤝 Contributing</h2>
+<p>Contributions are welcome! Feel free to submit issues or pull requests.</p>
+<h2>📄 License</h2>
+<p>This project is open source and available under the <a href="LICENSE">MIT License</a>.</p>
+</main>
+<footer>
+    <p>© 2025 My Static Site</p>
+</footer>
+</body>
+</html>
+

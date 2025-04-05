@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Post</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <!-- Default theme is dark -->
+    <link id="theme-stylesheet" rel="stylesheet" href="catppuccin-mocha.css">
+    <script>
+        function toggleTheme() {
+            var sheet = document.getElementById('theme-stylesheet');
+            if (sheet.getAttribute('href') === 'catppuccin-mocha.css') {
+                sheet.setAttribute('href', 'catppuccin-latte.css');
+            } else {
+                sheet.setAttribute('href', 'catppuccin-mocha.css');
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="site-name"><a href="index.html">Basker</a></div>
+    <label class="toggle">
+        <input type="checkbox" onclick="toggleTheme()" checked>
+        <span class="slider round"></span>
+    </label>
+</header>
+<main>
+
+<h1>Catppuccin Theme Showcase</h1>
+<p>This page demonstrates how various markdown elements appear when styled with the Catppuccin theme.</p>
+<h2>Text Formatting</h2>
+<p>Regular text appears in the default text color. You can make text <strong>bold</strong> or <em>italic</em> or <em><strong>both</strong></em>. You can also add ~~strikethrough~~ text.</p>
+<h2>Links</h2>
+<p>Check out the <a href="https://github.com/catppuccin/catppuccin">Catppuccin website</a> for more information.</p>
+<h2>Lists</h2>
+<h3>Unordered List</h3>
+<p>Here's an unordered list of Catppuccin accent colors:</p>
+<ul>
+<li>Rosewater</li>
+<li>Flamingo</li>
+<li>Pink</li>
+<li>Mauve</li>
+<li>Red</li>
+<li>Maroon</li>
+<li>Peach</li>
+<li>Yellow</li>
+<li>Green</li>
+<li>Teal</li>
+<li>Sky</li>
+<li>Sapphire</li>
+<li>Blue</li>
+<li>Lavender</li>
+</ul>
+<h3>Ordered List</h3>
+<p>The Catppuccin surface colors from darkest to lightest:</p>
+<ol>
+<li>Crust</li>
+<li>Mantle</li>
+<li>Base</li>
+<li>Surface0</li>
+<li>Surface1</li>
+<li>Surface2</li>
+<li>Overlay0</li>
+<li>Overlay1</li>
+<li>Overlay2</li>
+<li>Subtext0</li>
+<li>Subtext1</li>
+<li>Text</li>
+</ol>
+<h2>Blockquotes</h2>
+<blockquote>
+<p>Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes.</p>
+<p>This is a nested quote:</p>
+<blockquote>
+<p>Soothing pastel theme for the high-spirited!</p>
+</blockquote>
+</blockquote>
+<h2>Code</h2>
+<h3>Inline Code</h3>
+<p>Use the <code>--blue</code> CSS variable to apply the blue accent color.</p>
+<h3>Code Block</h3>
+<pre><code class="language-css">/* Catppuccin colors */
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+}
+</code></pre>
+<h2>Tables</h2>
+<p>| Element | Latte Color | Mocha Color |
+|---------|-------------|-------------|
+| Background | <code>#eff1f5</code> | <code>#1e1e2e</code> |
+| Text | <code>#4c4f69</code> | <code>#cdd6f4</code> |
+| Headings | <code>#8839ef</code> | <code>#cba6f7</code> |
+| Links | <code>#1e66f5</code> | <code>#89b4fa</code> |
+| Blockquotes | <code>#6c6f85</code> | <code>#a6adc8</code> |</p>
+<h2>Horizontal Rule</h2>
+<h2>Task List</h2>
+<ul>
+<li>[x] Implement Latte theme</li>
+<li>[x] Implement Mocha theme</li>
+<li>[ ] Create additional flavors (Macchiato, Frappé)</li>
+</ul>
+<h2>Emojis</h2>
+<p>Catppuccin flavors as emojis:
+🍦 Latte (Light)
+☕ Mocha (Dark)
+🥤 Frappé (Medium-Dark)
+☕ Macchiato (Medium)</p>
+<h2>Images</h2>
+<p>If this were rendered with full markdown support, an image would appear below:</p>
+<p><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" alt="Catppuccin Logo" /></p>
+</main>
+<footer>
+    <p>© 2025 My Static Site</p>
+</footer>
+</body>
+</html>
+

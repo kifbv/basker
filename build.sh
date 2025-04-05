@@ -2,7 +2,7 @@
 
 # Configurable paths and files
 SRC_DIR="src"
-OUT_DIR="dist"
+OUT_DIR="docs"
 HEADER_TEMPLATE="header.html"
 FOOTER_TEMPLATE="footer.html"
 LIGHT_THEME="catppuccin-latte.css"
