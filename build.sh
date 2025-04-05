@@ -58,8 +58,8 @@ date: '"$iso_date" "$mdfile" > "$mdfile.tmp"
     # Build the HTML page by concatenating header, converted markdown content, and footer.
     # First strip YAML frontmatter before passing to cmark
     (
-        # Replace the site name placeholder with the actual site name
-        sed "s/__SITE_NAME__/$SITE_NAME/g" "$HEADER_TEMPLATE"
+        # Replace the site name and title placeholders with the actual values
+        sed -e "s/__SITE_NAME__/$SITE_NAME/g" -e "s/__TITLE__/$title/g" "$HEADER_TEMPLATE"
         
         # Strip YAML frontmatter (content between --- markers) and convert markdown to HTML
         awk 'BEGIN {frontmatter=0; content=0} 
@@ -74,7 +74,8 @@ date: '"$iso_date" "$mdfile" > "$mdfile.tmp"
             }
             content == 1 { print }' "$mdfile" | cmark
             
-        cat "$FOOTER_TEMPLATE"
+        # Replace site name placeholder in footer
+        sed "s/__SITE_NAME__/$SITE_NAME/g" "$FOOTER_TEMPLATE"
     ) > "$output_file"
 
     # Store post data for sorting
@@ -163,8 +164,11 @@ cat <<EOF
 EOF
 ) >> "$index_file"
 
-# Copy CSS files and error page to the output directory
-cp "$LIGHT_THEME" "$DARK_THEME" "error.html" "$OUT_DIR"/
+# Copy CSS files to the output directory
+cp "$LIGHT_THEME" "$DARK_THEME" "$OUT_DIR"/
+
+# Process the error page to replace placeholder with site name
+sed "s/__SITE_NAME__/$SITE_NAME/g" "error.html" > "$OUT_DIR/error.html"
 
 echo "Site generated in $OUT_DIR"
 
