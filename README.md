@@ -23,10 +23,13 @@ Check out the live demo at [basker.franckratier.design](https://basker.franckrat
 
 ### Installation
 
-1. Clone this repository:
+1. Use this repository as a template:
+   - Click the "Use this template" button at the top of the [GitHub repository](https://github.com/kifbv/basker)
+   - Name your new repository and create it
+   - Clone your new repository:
    ```bash
-   git clone https://github.com/yourusername/basker.git
-   cd basker
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
    ```
 
 2. Place your Markdown files in the `src/` directory

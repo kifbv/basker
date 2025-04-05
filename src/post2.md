@@ -1,19 +1,14 @@
----
-title: Basker Readme file (example)
-description: Readme file from the project's repo
-date: 2025-04-03
----
-
 # 🌟 Basker - A Minimalist Static Site Generator 🌟
 
 ## 📝 Overview
 
 Basker is a lightweight static site generator that converts Markdown files into a beautifully styled website using the Catppuccin color theme. It's perfect for blogs, documentation sites, or personal websites that prioritize simplicity and readability.
 
+Check out the live demo at [basker.franckratier.design](https://basker.franckratier.design) to see Basker in action!
+
 ## ✨ Features
 
-- 🎨 **Beautiful Styling**: Uses the Catppuccin color palette (both Latte and Mocha themes)
-- 🌓 **Dark/Light Mode Toggle**: Switch between themes with a click
+- 🌓 **Dark/Light Mode Toggle**: Switch between Catppuccin Latte & Mocha themes with a click
 - 📱 **Responsive Design**: Looks great on mobile, tablet, and desktop
 - 🔤 **Google Fonts**: Uses Cinzel for headings and Fauna One for body text
 - 📅 **Automatic Date Handling**: Sorts posts by date and displays them nicely
@@ -28,10 +23,13 @@ Basker is a lightweight static site generator that converts Markdown files into 
 
 ### Installation
 
-1. Clone this repository:
+1. Use this repository as a template:
+   - Click the "Use this template" button at the top of the [GitHub repository](https://github.com/kifbv/basker)
+   - Name your new repository and create it
+   - Clone your new repository:
    ```bash
-   git clone https://github.com/yourusername/basker.git
-   cd basker
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
    ```
 
 2. Place your Markdown files in the `src/` directory
@@ -41,7 +39,7 @@ Basker is a lightweight static site generator that converts Markdown files into 
    ./build.sh
    ```
 
-4. Your generated site will be in the `dist/` directory
+4. Your generated site will be in the `docs/` directory. Browse/test it locally and [publish it](https://docs.github.com/en/pages) to Github Pages!
 
 ## 📄 File Structure
 
@@ -56,7 +54,7 @@ basker/
 │   ├── post1.md
 │   ├── post2.md
 │   └── ...
-└── dist/              # Generated HTML and assets
+└── docs/              # Generated HTML and assets
     ├── index.html
     ├── post1.html
     └── ...
@@ -112,10 +110,6 @@ To change fonts, edit:
 1. The Google Fonts import in `header.html`
 2. The same import in the index page section of `build.sh`
 3. Update the font-family properties in both CSS files
-
-### List Style
-
-Lists are displayed with bullet points by default. This can be customized in the CSS files.
 
 ## 🔧 Advanced Usage
 
